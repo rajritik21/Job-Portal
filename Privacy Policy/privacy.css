@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+}
+h2, h3 {
+    color: #333;
+}
+h2 {
+    text-align: center;
+}
+.content {
+    max-width: 800px;
+    margin: auto;
+}
+.content p, .content pre {
+    margin-bottom: 15px;
+}
