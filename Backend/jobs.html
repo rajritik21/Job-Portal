@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+</head>
+<body>
+    <h1>Latest Job Opportunities</h1>
+    <table border="1" cellpadding="10" cellspacing="0" id="jobsTable">
+        <thead>
+            <tr>
+                <th>Job Title</th>
+                <th>Category</th>
+                <th>Salary</th>
+                <th>Experience</th>
+                <th>Start Date</th>
+                <th>Eligibility</th>
+                <th>Qualification</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        async function fetchJobs() {
+            try {
+                const response = await fetch('http://localhost:3000/api/jobs');
+                const jobs = await response.json();
+                const tableBody = document.getElementById('jobsTable').querySelector('tbody');
+                tableBody.innerHTML = '';
+                jobs.forEach(job => {
+                    const row = `
+                        <tr>
+                            <td>${job.jobTitle}</td>
+                            <td>${job.category}</td>
+                            <td>${job.salary}</td>
+                            <td>${job.experience}</td>
+                            <td>${new Date(job.startDate).toLocaleDateString()}</td>
+                            <td>${job.eligibility}</td>
+                            <td>${job.qualification}</td>
+                        </tr>`;
+                    tableBody.innerHTML += row;
+                });
+            } catch (err) {
+                console.error(err);
+                alert('Failed to fetch jobs');
+            }
+        }
+        fetchJobs();
+    </script>
+</body>
+</html>
