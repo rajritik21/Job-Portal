@@ -11,7 +11,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background: white;
+    background:#2ecc71;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
@@ -24,14 +24,15 @@ nav {
     align-items: center;
     gap: 0.5rem;
     font-size: 1.5rem;
-    color: #0052cc;
+    color:wheat;
     font-weight: bold;
-    text-decoration: none;
+    font-style: italic;
+    text-decoration:solid;
 }
 
 .logo img {
-    width: 40px;
-    height: 40px;
+    width: 100px;
+    height: 45px;
 }
 
 .nav-links {
@@ -42,22 +43,22 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: black;
     font-weight: 500;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 1rem;
     border-radius: 4px;
     transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
     background: #f0f0f0;
-    color: #0052cc;
+    /* color: ; */
 }
 
-.nav-links a.active {
+/* .nav-links a.active {
     color: #0052cc;
-    background: #e6f0ff;
-}
+    /* background: #e6f0ff; } */
+
 
 .auth-buttons {
     display: flex;
@@ -152,8 +153,8 @@ body {
 }
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1920/1080');
-    background-image: url("https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(14, 13, 13, 0.5)), url('/api/placeholder/1920/1080');
+    background-image: url("https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: cover;
     background-position: center;
     height: 91vh;
@@ -162,7 +163,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: rgb(14, 14, 14);
     padding: 0 1rem;
 }
 
@@ -233,12 +234,61 @@ body {
 
 .category-card:hover {
     transform: translateY(-5px);
+    background-color: #00d4ff;
 }
 
 /* Latest Jobs Section */
 .latest-jobs {
     background: #f8f9fa;
     padding: 4rem 5%;
+    /* background-image: url("https://plus.unsplash.com/premium_photo-1661328090120-a6ef40841abe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover; */
+}
+.job-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.job-container {
+    display: flex;                /* Enables Flexbox */
+    flex-wrap: wrap;              /* Ensures wrapping on smaller screens */
+    justify-content: space-around; /* Distributes space evenly */
+    gap: 20px;                    /* Adds spacing between job cards */
+}
+
+.job-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;                   /* Adjust this for card width */
+    min-width: 250px;             /* Minimum width to handle small screens */
+    box-sizing: border-box;
+    transition: transform 0.2s;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);  /* Slight hover effect */
+    background-color: #00d4ff;
+}
+/* .category-card:hover {
+    transform: translateY(-5px);
+    background-color: #00d4ff;
+} */
+
+.apply-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.apply-btn:hover {
+    background-color: #0056b3;
 }
 
 @media (max-width: 768px) {
